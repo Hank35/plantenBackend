@@ -2,7 +2,7 @@ const Plant = require('../models/plant');
 const defS = require('../../config/default_data');
 
 function getAll(req, res) {
-    plant.find({}, {
+    Plant.find({}, {
             __v: 0
         })
         .then(plants => {
