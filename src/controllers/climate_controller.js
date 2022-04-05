@@ -11,21 +11,21 @@ function getAll(req, res) {
         });
 };
 
-function getOne(req, res) {
-    Climate.findOne({
-            _id: req.headers._id
-        })
-        .then(climate => {
-            if (climate === null) {
-                res.status(401).send({
-                    Error: 'climate does not exist.'
-                })
-            } else {
-                res.status(200).send(climate);
-                console.log('>>climate returned');
-            }
-        })
-}
+// function getOne(req, res) {
+//     Climate.findOne({
+//             _id: req.headers._id
+//         })
+//         .then(climate => {
+//             if (climate === null) {
+//                 res.status(401).send({
+//                     Error: 'climate does not exist.'
+//                 })
+//             } else {
+//                 res.status(200).send(climate);
+//                 console.log('>>climate returned');
+//             }
+//         })
+// }
 
 function getOneById(req, res) {
     Climate.findById(req.params.id)
