@@ -12,7 +12,7 @@ app.use(cors());
 app.use(bodyParser.json());
 routes(app);
 
-var env = process.argv[2] || 'dev';
+var env = process.argv[2] || 'prod';
 switch (env) {
     case 'dev':
       mongodb.createDevConnection();

@@ -25,6 +25,7 @@ module.exports = (app) => {
     //
     //create new plant with name, family, description, waterneed, sunneed
     app.post('/api/plant/', AuthController.validateToken, PlantController.create);
+    app.get('/api/plant/', PlantController.getAll);
 
     //
     //Climate routes
